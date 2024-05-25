@@ -1,0 +1,33 @@
+package hello;
+
+import java.util.Scanner;
+
+public class average_num_calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 让用户输入一系列正整数，
+		// 最后输入-1表示输入结束，
+		// 最后程序机选出这些数字的平均数，输出输入的数字的个数和平均数
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please enter any positive numbers you want. "
+				+ "\nEnter -1 to stop the program and get the average "
+				+ "value of your input numbers!");
+		int input_num = input.nextInt();
+		int count = 0;
+		int total = 0;
+		
+		while (input_num != -1) {
+			total = total + input_num;
+			count++;
+			input_num = input.nextInt();
+		}
+		
+		if (count > 0) {
+			System.out.println("The average value is: " + ((double)total / count));
+		}
+	}
+
+}

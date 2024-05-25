@@ -1,0 +1,11 @@
+package hello;
+
+public class vendor_machine {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 自动售票机
+		// 西东售
+	}
+
+}

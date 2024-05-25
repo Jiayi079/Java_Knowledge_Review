@@ -1,0 +1,23 @@
+package hello;
+
+import java.util.Scanner;
+
+public class compare_nums {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Please input two number to compare them!");
+		System.out.print("a = ");
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		System.out.print("b = ");
+		int b = input.nextInt();
+		
+		if (a > b) {
+			System.out.println("a is greater than b");
+		} else {
+			System.out.println("b is greater than a");
+		}
+	}
+
+}

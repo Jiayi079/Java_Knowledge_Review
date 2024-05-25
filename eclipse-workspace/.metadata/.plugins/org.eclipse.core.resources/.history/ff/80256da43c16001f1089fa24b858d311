@@ -1,0 +1,21 @@
+package hello;
+
+public class while_do_while {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// check the count difference between while loop and do-while loop
+		
+		// while loop
+		int count = 3;
+		while (count >= 0) {
+			System.out.println(count);
+			count = count - 1;
+		}
+		System.out.println("count value outside the loop: " + count);
+		
+		
+
+	}
+
+}

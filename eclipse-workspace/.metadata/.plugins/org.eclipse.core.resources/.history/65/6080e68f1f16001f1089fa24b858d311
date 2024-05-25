@@ -1,0 +1,51 @@
+package hello;
+
+import java.util.Scanner;
+
+public class ticket_machine {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 自动售票机
+		// 自动售票机需要用户做两个操作：
+		// 1. 选择终点或路线
+		// 2. 投入纸币或硬币
+		// 自动售货机则根据用户的输入做出相应的动作：
+		// 1. 打印出车票并返回找零
+		// 2. 或告知用户余额不足以出票
+		
+		Scanner input = new Scanner(System.in);
+		
+		int balance = 0;
+		
+		while (true) 
+		{
+			System.out.println("Welcome the ticket machine!");
+			// ask the user to input the money
+			System.out.print("Please input your coins: ");
+	
+			int coins = input.nextInt();
+			balance = balance + coins;
+			
+			// check if user input coins greater than the tickets price
+			if (balance >= 10) {
+				// print out the ticket
+				System.out.println("Here's your tickets!");
+				System.out.println("************************");
+				System.out.println("       BART LINE");
+				System.out.println("    Ticket Price: $10");
+				System.out.println("************************");
+				
+				balance = balance - 10;
+				
+				// calculate the return money
+				System.out.println("Here's the return money: $" + (balance - 10));
+			} else {
+				System.out.println("Please input more money. Total amount:  $"
+			+ 10 + ". \nYour balance: $" + balance + ". \nYou still need insert: $" 
+						+ (10 - balance));
+			}
+		}
+	}
+
+}

@@ -1,0 +1,23 @@
+package hello;
+
+import java.util.Scanner;
+
+public class num_reverse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Please enter the number you want to reverse: ");
+		int input_num = input.nextInt();
+		int split;
+		
+		while (input_num != 0) 
+		{
+			split = input_num % 10;
+			System.out.print(split);
+			input_num = input_num / 10;
+		}
+	}
+
+}
